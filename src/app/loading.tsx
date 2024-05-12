@@ -1,3 +1,6 @@
+"use client";
+import { Row, Spin } from "antd";
+
 export default function Loading() {
-  return <h1>Loading...</h1>;
+  return <Row justify="center"><Spin size="large" /></Row>;
 }
