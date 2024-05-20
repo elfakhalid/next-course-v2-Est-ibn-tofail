@@ -3,7 +3,7 @@ import { UnsplashImage } from "../../../interfaces/unsplash-image";
 import { Alert, Row } from "antd";
 import Image from "next/image";
 
-export const revalidate = 0;
+export const revalidate = 15;
 
 export default async function Page() {
   const response: UnsplashImage = await getRandomImage();

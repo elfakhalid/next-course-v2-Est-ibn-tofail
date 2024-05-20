@@ -13,3 +13,16 @@ export const getRandomImage = async (): Promise<UnsplashImage> => {
   });
   return response.data;
 };
+
+export const getImagesByTopic = async (
+  topic: string
+): Promise<UnsplashImage[]> => {
+  const response = await axios.get(`/photos/random`, {
+    params: {
+      query: topic,
+      client_id: process.env.UNSPLASH_ACCESS_KEY,
+      count: 10,
+    },
+  });
+  return response.data;
+};

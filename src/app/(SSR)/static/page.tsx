@@ -2,6 +2,7 @@ import { getRandomImage } from "../../../services/axios";
 import { UnsplashImage } from "../../../interfaces/unsplash-image";
 import { Alert, Row } from "antd";
 import Image from "next/image";
+import Link from "next/link";
 export default async function Page() {
   const response: UnsplashImage = await getRandomImage();
   return (
@@ -25,6 +26,11 @@ export default async function Page() {
             }}
           />
         </div>
+      </Row>
+      <Row justify="center">
+        <Link href={`/user/${response.user.username}`}>
+          {response.user.username}
+        </Link>
       </Row>
     </div>
   );
