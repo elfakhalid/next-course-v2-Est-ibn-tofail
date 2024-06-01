@@ -47,6 +47,9 @@ const NavBar: React.FC = () => {
           isr
         </StyledLink>
       </NavItems>
+      <StyledLink $active={pathname === "/search"} href="/search">
+        Search
+      </StyledLink>
     </Nav>
   );
 };
