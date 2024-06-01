@@ -7,10 +7,13 @@ export default function Home() {
         alignItems: "center",
         height: "100vh",
         fontSize: "2rem",
+        textAlign: "center",
       }}
     >
-      this is an educational project to show how to use Next.js with Server Side
-      Rendering (SSR) and Client Side Rendering (CSR)
+      <p>
+        this is an educational project to show how to use Next.js with Server
+        Side Rendering (SSR) and Client Side Rendering (CSR)
+      </p>
     </div>
   );
 }
